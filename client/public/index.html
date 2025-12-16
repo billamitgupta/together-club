@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#667eea" />
+    <meta name="description" content="Join India's most exclusive travel community for the ultimate New Year experience. 200 elite creators, Himalayan luxury estates, premium networking. Dec 29 - Jan 3, 2025." />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" />
+    <link rel="preload" href="https://checkout.razorpay.com/v1/checkout.js" as="script" />
+    
+    <!-- External Scripts -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Default title (will be overridden by React Helmet) -->
+    <title>Together.Club - Elite New Year Experience 2025 | Himalayan Luxury Retreat</title>
+    
+    <!-- Fallback meta tags (will be enhanced by React Helmet) -->
+    <meta name="keywords" content="luxury travel, new year 2025, himalayan retreat, elite creators, exclusive community" />
+    <meta name="author" content="Together.Club" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>You need to enable JavaScript to experience Together.Club's elite travel community.</p>
+        <p>Please enable JavaScript in your browser settings and refresh the page.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    
+    <!-- Performance monitoring -->
+    <script>
+      // Basic performance monitoring
+      window.addEventListener('load', function() {
+        if ('performance' in window) {
+          setTimeout(function() {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            if (perfData && perfData.loadEventEnd > 0) {
+              console.log('Page load time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+            }
+          }, 0);
+        }
+      });
+    </script>
+  </body>
+</html>
