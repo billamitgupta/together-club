@@ -9,7 +9,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://your-backend-domain.vercel.app/api/:splat"
+  to = "https://server-nine-sigma-44.vercel.app/api/:splat"
   status = 200
   force = true
 
@@ -19,10 +19,10 @@
   status = 200
 
 [context.production.environment]
-  REACT_APP_API_URL = "https://your-backend-domain.vercel.app"
+  REACT_APP_API_URL = "https://server-nine-sigma-44.vercel.app"
 
 [context.deploy-preview.environment]
-  REACT_APP_API_URL = "https://your-backend-domain.vercel.app"
+  REACT_APP_API_URL = "https://server-nine-sigma-44.vercel.app"
 
 [[headers]]
   for = "/*"
