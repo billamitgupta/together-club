@@ -6,6 +6,7 @@
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
+  REACT_APP_API_URL = "https://server-nine-sigma-44.vercel.app"
 
 [[redirects]]
   from = "/api/*"

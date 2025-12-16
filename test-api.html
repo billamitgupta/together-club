@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Together Club API Test</h1>
+    <button onclick="testAPI()">Test API Connection</button>
+    <div id="results"></div>
+
+    <script>
+        async function testAPI() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing API...</p>';
+            
+            try {
+                // Test health endpoint
+                const healthResponse = await fetch('https://server-nine-sigma-44.vercel.app/health');
+                const healthData = await healthResponse.json();
+                
+                // Test available slots endpoint
+                const slotsResponse = await fetch('https://server-nine-sigma-44.vercel.app/api/available-slots');
+                const slotsData = await slotsResponse.json();
+                
+                results.innerHTML = `
+                    <h3>Health Check:</h3>
+                    <pre>${JSON.stringify(healthData, null, 2)}</pre>
+                    
+                    <h3>Available Slots:</h3>
+                    <pre>${JSON.stringify(slotsData, null, 2)}</pre>
+                `;
+            } catch (error) {
+                results.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

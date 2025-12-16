@@ -3,6 +3,12 @@ const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 class ApiService {
   constructor() {
     this.baseURL = API_BASE_URL;
+    // Debug logging
+    console.log('API Service initialized with URL:', this.baseURL);
+    console.log('Environment variables:', {
+      REACT_APP_API_URL: process.env.REACT_APP_API_URL,
+      NODE_ENV: process.env.NODE_ENV
+    });
   }
 
   async request(endpoint, options = {}) {
