@@ -13,13 +13,17 @@ var apiRouter = require('./routes/api');
 var app = express();
 
 // MongoDB connection
+console.log('Attempting to connect to MongoDB...');
+console.log('MongoDB URI:', process.env.MONGODB_URI ? 'Set' : 'Not set');
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/togetherclub', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
-  console.log('Connected to MongoDB');
+  console.log('✅ Connected to MongoDB successfully');
 }).catch((err) => {
-  console.error('MongoDB connection error:', err);
+  console.error('❌ MongoDB connection error:', err);
+  console.error('MongoDB URI being used:', process.env.MONGODB_URI);
 });
 
 // CORS configuration for production
@@ -55,7 +59,12 @@ app.get('/health', (req, res) => {
   res.status(200).json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV 
+    environment: process.env.NODE_ENV,
+    mongodb: {
+      connected: mongoose.connection.readyState === 1,
+      state: mongoose.connection.readyState,
+      uri: process.env.MONGODB_URI ? 'Set' : 'Not set'
+    }
   });
 });
 
