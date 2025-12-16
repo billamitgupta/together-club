@@ -182,3 +182,7 @@ temp/
 *.bak
 *.backup
 *.old
+.vercel
+
+# Local Netlify folder
+.netlify
