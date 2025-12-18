@@ -324,6 +324,9 @@ function App() {
 
         <div className="party-lights"></div>
         <div className="tc-hero-content">
+          <div className="tc-logo">
+            <img src="/togetha logo.png" alt="Together.Club" className="tc-logo-img" />
+          </div>
           <h1>New Year, but make it elite. 🥂</h1>
           <h2>29 Dec – 3 Jan • Himalayan Luxury • 200 Elite Creators • The Ultimate NYE Experience 🎊</h2>
           
@@ -460,6 +463,9 @@ function App() {
 
       {/* FOOTER */}
       <footer className="tc-footer">
+        <div className="tc-footer-logo">
+          <img src="/togetha logo.png" alt="Together.Club" className="tc-footer-logo-img" />
+        </div>
         <div className="tc-footer-brand">Together.Club</div>
         <div className="tc-footer-desc">Where influence meets excellence.</div>
         <div className="tc-footer-socials">

@@ -7,13 +7,14 @@
 }
 
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gold-gradient: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
-  --dark-bg: #000000;
-  --card-bg: rgba(255, 255, 255, 0.03);
+  --primary-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --accent-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(255, 255, 255, 0.05);
   --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --accent-color: #ff6b35;
 }
 
 .light-theme {
@@ -185,16 +186,34 @@ body, html, #root, .tc-root {
   padding: 0 1rem;
 }
 
+.tc-logo {
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.tc-logo-img {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.6));
+  transition: all 0.4s ease;
+  margin-bottom: 1rem;
+}
+
+.tc-logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 25px rgba(255, 107, 53, 0.8));
+}
+
 .tc-hero h1 {
   font-size: clamp(2rem, 8vw, 6rem);
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f7971e 50%, #ffd200 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ff6b35 50%, #f7931e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -213,21 +232,21 @@ body, html, #root, .tc-root {
 }
 
 .tc-slots-left {
-  background: rgba(247, 151, 30, 0.1);
-  color: #ffd200;
+  background: rgba(255, 107, 53, 0.15);
+  color: #ff6b35;
   padding: 0.6rem 1.5rem;
   border-radius: 25px;
   font-weight: 500;
   font-size: 0.9rem;
-  border: 1px solid rgba(247, 151, 30, 0.3);
+  border: 1px solid rgba(255, 107, 53, 0.3);
   backdrop-filter: blur(20px);
   animation: glow 3s ease-in-out infinite;
   display: inline-block;
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(247, 151, 30, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(247, 151, 30, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.6); }
 }
 
 .fireworks {
@@ -499,15 +518,15 @@ body, html, #root, .tc-root {
 }
 
 .tc-btn-primary {
-  background: var(--gold-gradient);
-  color: #000;
-  box-shadow: 0 20px 40px rgba(247, 151, 30, 0.3);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
   font-weight: 600;
 }
 
 .tc-btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 30px 60px rgba(247, 151, 30, 0.5);
+  box-shadow: 0 30px 60px rgba(255, 107, 53, 0.5);
 }
 
 .tc-btn-secondary {
@@ -542,7 +561,7 @@ body, html, #root, .tc-root {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: var(--gold-gradient);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -610,7 +629,7 @@ body, html, #root, .tc-root {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
-  background: var(--gold-gradient);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -821,11 +840,27 @@ body, html, #root, .tc-root {
   backdrop-filter: blur(40px);
 }
 
+.tc-footer-logo {
+  margin-bottom: 1rem;
+}
+
+.tc-footer-logo-img {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.3));
+  transition: all 0.3s ease;
+}
+
+.tc-footer-logo-img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.6));
+}
+
 .tc-footer-brand {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: var(--gold-gradient);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -855,7 +890,7 @@ body, html, #root, .tc-root {
 }
 
 .tc-footer-socials a:hover {
-  color: #ffd200;
+  color: #ff6b35;
   transform: translateY(-2px);
 }
 
@@ -972,7 +1007,7 @@ body, html, #root, .tc-root {
 .tc-price-display {
   font-size: 1.5rem;
   font-weight: 700;
-  background: var(--gold-gradient);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1198,8 +1233,18 @@ body, html, #root, .tc-root {
     margin-bottom: 1rem;
   }
 
+  .tc-logo-img {
+    height: 100px;
+    width: auto;
+  }
+
   .tc-footer {
     padding: 4rem 2rem;
+  }
+
+  .tc-footer-logo-img {
+    height: 50px;
+    width: auto;
   }
 
   .tc-footer-brand {
